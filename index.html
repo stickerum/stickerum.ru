@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Stickerum</title>
+  <link rel="icon" type="image/png" href="/public/favicon.png">
+  <meta property="og:title" content="@stickerumbot">
+  <meta property="og:site_name" content="Stickerum">
+  <meta name="description" property="og:description" content="Напечатаю любые стикеры из Telegram">
+  <link rel="stylesheet" type="text/css" href="/public/bundle.css?v=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+  <div class="screen screen--centered screen--stretched">
+    <div class="logo"></div>
+    <div class="name">
+      Stickerum
+    </div>
+    <div class="lead">
+      Напечатаю и вырежу на листе А5 твой набор из 12 стикеров.<br>
+      Бесплатная доставка по всему миру.<br>
+      Закажи себе и друзьям.
+    </div>
+    <div class="button button--telegram" onclick="customProtocol.click(this)" data-link="https://t.me/stickerumbot" data-app-link="tg://resolve?domain=stickerumbot">
+      stickerumbot
+    </div>
+    <div class="links">
+      <a onclick="customProtocol.click(this)" data-link="https://t.me/stickerumspb" data-app-link="tg://resolve?domain=stickerumspb">Новости</a>
+      <a href="http://telegra.ph/Otvechaem-na-voprosy-03-20" target="_blank">Помощь</a>
+    </div>
+  </div>
+
+  <div class="screen">
+    <div id="instagram-photos" class="photos"></div>
+
+    <div class="instagram-footer">
+      <span class="instagram-footer__greeting">
+        Подписывайтесь на нас в Instagram
+      </span>
+
+      <div class="button button--instagram" onclick="customProtocol.click(this)" data-link="https://www.instagram.com/stickerum/" data-app-link="instagram://user?username=stickerum">
+        stickerum
+      </div>
+    </div>
+  </div>
+
+  <script src="/public/bundle.js"></script>
+</body>
+</html>

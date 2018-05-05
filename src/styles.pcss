@@ -1,0 +1,175 @@
+:root {
+  @custom-media --mobile all and (max-width: 980px);
+  @custom-media --desktop all and (min-width: 981px);
+}
+
+body {
+  margin: 0;
+  /* font-size: 18px; */
+  font-size: 1em;
+  font-family: "Lucida Grande";
+  /* line-height: 28px; */
+  line-height: 1.54em;
+}
+
+a {
+  color: #7B7979;
+  text-decoration: underline;
+
+  &:hover {
+    color: #595858;
+    cursor: pointer;
+  }
+}
+
+@font-face {
+    font-family: 'Lucida Grande';
+    src: url(/public/fonts/Lucida-Grande-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Arial Rounded MT Bold';
+    src: url(/public/fonts/Arial-Rounded-MT-Bold.ttf);
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  width: 100%;
+
+  &--centered {
+      align-items: center;
+  }
+
+  &--stretched {
+    height: 100%;
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
+  /* padding: 15px 20px; */
+  padding: 0.75em 1.06em;
+  border-radius: 36px;
+  background: #4161d0;
+  color: #fff;
+  letter-spacing: 0.4;
+  /* font-size: 23px; */
+  font-size: 1.25em;
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  &--telegram {
+    background: #2aa2d5;
+
+    &::before {
+      margin-right: 15px;
+      width: 34px;
+      height: 28px;
+      background-image: svg-load(./svg/telegram-logo.svg);
+    }
+  }
+
+  &--instagram {
+    background: radial-gradient(farthest-corner at 40px 70px, #FEE081 0%, #F87825 24%, #DB2B75 49%, #A32B98 66%, #4B62D6 100%);
+
+    &::before {
+      margin-right: 15px;
+      width: 28px;
+      height: 28px;
+      background-image: svg-load(./svg/instagram-logo.svg);
+    }
+  }
+}
+
+.logo {
+  margin: 0 auto;
+  margin-top: auto;
+  /* width: 170px; */
+  /* height: 170px; */
+  width: 7em;
+  height: 7em;
+  background-image: svg-load(./svg/stickerum-logo.svg, fill: red);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.name {
+  /* margin-top: 40px; */
+  margin-top: 0.7em;
+  /* margin-bottom: 19px; */
+  margin-bottom: 0.8em;
+  text-align: center;
+  /* font-size: 32px; */
+  font-size: 2em;
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+}
+
+.lead {
+  /* margin-bottom: 35px; */
+  margin-bottom: 1em;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.links {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-bottom: 25px;
+  max-width: 240px;
+  width: 100%;
+}
+
+.photos {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.instagram-image-wrapper {
+  display: inline-block;
+
+  flex: 0 0 33.3333%;
+  /* margin: 1px; */
+  max-height: 200px;
+  height: 33vw;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.instagram-footer {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 15px;
+
+  @media (--mobile) {
+    flex-direction: column;
+  }
+
+  &__greeting {
+    margin-right: 15px;
+
+    @media (--mobile) {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
