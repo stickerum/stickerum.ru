@@ -5,22 +5,24 @@ module.exports = (() => {
 
   let instagramPhotoBlock = document.getElementById('instagram-grid');
 
-  instagramData.data.forEach(item => {
+  if (instagramPhotoBlock) {
+    instagramData.data.forEach(item => {
 
-    let link = item.link;
-    let src = item.images.low_resolution.url;
+      let link = item.link;
+      let src = item.images.low_resolution.url;
 
-    let photoWrapper = document.createElement('a');
-    photoWrapper.classList.add('instagram-grid__photo');
+      let photoWrapper = document.createElement('a');
+      photoWrapper.classList.add('instagram-grid__photo');
 
-    photoWrapper.href = link;
-    photoWrapper.target = '_blank';
+      photoWrapper.href = link;
+      photoWrapper.target = '_blank';
 
-    photoWrapper.style.background = 'url(' + src + ') no-repeat center center';
-    photoWrapper.style.backgroundSize = 'cover',
+      photoWrapper.style.background = 'url(' + src + ') no-repeat center center';
+      photoWrapper.style.backgroundSize = 'cover',
 
-    instagramPhotoBlock.appendChild(photoWrapper);
-  });
+      instagramPhotoBlock.appendChild(photoWrapper);
+    });
+  }
 
 
 })();

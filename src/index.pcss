@@ -12,6 +12,10 @@ body {
   line-height: 1.54em;
 }
 
+h1, h2 {
+  font-family: 'Lucida Grande Bold';
+}
+
 a {
   color: #7B7979;
   text-decoration: underline;
@@ -28,9 +32,15 @@ a {
 }
 
 @font-face {
+    font-family: 'Lucida Grande Bold';
+    src: url(/public/fonts/Lucida-Grande-Bold.ttf);
+}
+
+@font-face {
     font-family: 'Arial Rounded MT Bold';
     src: url(/public/fonts/Arial-Rounded-MT-Bold.ttf);
 }
+
 
 .screen {
   display: flex;
@@ -170,4 +180,69 @@ a {
       margin-bottom: 15px;
     }
   }
+}
+
+/** help page */
+.help-page-wrapper {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 750px;
+
+  & a {
+    color: #757373;
+
+    &:hover {
+      color: #363535;
+    }
+  }
+
+  & h1 {
+    font-size: 24px;
+
+    @media (--mobile) {
+      letter-spacing: -1px;
+    }
+  }
+
+  & h2 {
+    margin-top: 1em;
+    margin-bottom: -0.3em;
+    letter-spacing: 0;
+    font-size: 20px;
+    line-height: 1.6em;
+
+    @media (--mobile) {
+      letter-spacing: -1px;
+    }
+  }
+
+  & p {
+    font-size: 16px;
+    line-height: 1.8em;
+  }
+
+  & .logo {
+    margin: 50px auto;
+  }
+}
+
+.help-image {
+  margin: 25px 0;
+
+  & img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  &__description {
+    display: block;
+    margin-top: 10px;
+    color: #888;
+    text-align: center;
+  }
+}
+
+.author {
+  color: #ababab;
 }
