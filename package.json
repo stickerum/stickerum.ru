@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack ./src/scripts.js -o ./public/bundle.js --verbose --watch --mode production",
-    "css": "postcss ./src/styles.pcss -o ./public/bundle.css --verbose --watch"
+    "build": "webpack ./src/index.js -o ./public/bundle.js --verbose --watch --mode production",
+    "css": "postcss ./src/index.pcss -o ./public/bundle.css --verbose --watch"
   },
   "author": "",
   "license": "ISC",

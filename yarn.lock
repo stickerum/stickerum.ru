@@ -2259,10 +2259,6 @@ ignore@^3.3.5:
   version "3.3.7"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.7.tgz#612289bfb3c220e186a58118618d5be8c1bab021"
 
-img-2@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/img-2/-/img-2-0.0.3.tgz#b3b6dd57798bbf802df863e318fc4fcfcff9a294"
-
 import-local@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/import-local/-/import-local-1.0.0.tgz#5e4ffdc03f4fe6c009c6729beb29631c2f8227bc"
@@ -4886,10 +4882,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
-
-vanilla-lazyload@^8.7.1:
-  version "8.7.1"
-  resolved "https://registry.yarnpkg.com/vanilla-lazyload/-/vanilla-lazyload-8.7.1.tgz#847c2f63b438bc7d4a8fab15e5074a231e2d94fa"
 
 viewport-dimensions@^0.2.0:
   version "0.2.0"
