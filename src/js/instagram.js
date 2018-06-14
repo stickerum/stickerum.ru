@@ -20,9 +20,6 @@ module.exports = (() => {
          */
         let photoWrapper = document.createElement('a');
 
-        /**
-         * @todo
-         */
         photoWrapper.classList.add('instagram-grid__photo');
 
         /**
