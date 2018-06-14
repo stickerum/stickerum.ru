@@ -1,11 +1,36 @@
-module.exports = (() => {
+/**
+ * Document ready function wrapper
+ *
+ * @param {function} f
+ */
+const docReady = (f) => {
+  return /in/.test(document.readyState) ? window.setTimeout(docReady, 9, f) : f();
+};
+
+/**
+ * Main script
+ */
+const stickerum = (() => {
   /**
-   * Load and init deeplinker module
+   * Define modules
    */
-  require('@codexteam/deeplinker').init();
+  const deeplinker = require('@codexteam/deeplinker');
+  const instagram = require('./js/instagram');
 
   /**
-   * Fill wrapper for Instagram photos
+   * Initial function
    */
-  require('./js/instagram').init();
+  const init = () => {
+    console.info('Stickerum is ready!');
+
+    deeplinker.init();
+    instagram.init();
+  }
+
+  /**
+   * Start script when page is loaded
+   */
+  docReady(init);
 })();
+
+module.exports = stickerum;
