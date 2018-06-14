@@ -5,10 +5,8 @@
 
 body {
   margin: 0;
-  /* font-size: 18px; */
   font-size: 1em;
   font-family: "Lucida Grande";
-  /* line-height: 28px; */
   line-height: 1.54em;
 }
 
@@ -62,17 +60,19 @@ a {
   display: inline-flex;
   align-items: center;
   margin: 10px;
-  /* padding: 15px 20px; */
   padding: 0.65em 1.10em;
   border-radius: 36px;
   background: #4161d0;
-  color: #fff;
+  color: #fff !important;
   letter-spacing: 0.4;
-  /* font-size: 23px; */
   font-size: 1.25em;
   font-family: "Arial Rounded MT Bold", Arial, sans-serif;
   cursor: pointer;
   user-select: none;
+
+  a& {
+    text-decoration: none;
+  }
 
   &::before {
     background-size: contain;
@@ -245,4 +245,13 @@ a {
 
 .author {
   color: #ababab;
+
+  & a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.command {
+  color: rgb(19, 141, 255);
 }
