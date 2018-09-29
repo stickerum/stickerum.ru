@@ -39,7 +39,7 @@ npm run instagram
 
 ### Build JS and CSS
 
-Use the following command to build scripts and styles.
+Use the following commands to build scripts and styles.
 
 ```
 npm run build
