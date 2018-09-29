@@ -6,9 +6,9 @@
 
 Use Node.js and NPM to build scripts and styles.
 
-### Images from Instagram
+### Get images from Instagram
 
-Get the latest pack of images from your Instagram profile. You need to get an Instagram access token.
+To get the latest pack of images from your Instagram profile you need an Instagram access token.
 
 1. Create a new Instagram app on the page:
 https://www.instagram.com/developer/clients/register/
@@ -29,7 +29,7 @@ For example: `https://stickerum.ru/#access_token=<ACCESS_TOKEN>`
 
 Your access token was placed to the URI. Place this token into the `.env` file (copy skeleton from `.env.sample`).
 
-Then call script.
+Then call a script:
 
 ```
 npm run instagram
@@ -54,3 +54,5 @@ npm run css
 ```shell
 docker-compose up
 ```
+
+Local site will be available at [http://localhost:8080](http://localhost:8080).
