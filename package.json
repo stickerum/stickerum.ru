@@ -1,7 +1,6 @@
 {
   "name": "stickerum.ru",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "instagram": "node ./bin/load-instagram-photos.js",
     "build": "webpack ./src/index.js -o ./public/bundle.js --verbose --watch --mode production",
@@ -12,7 +11,7 @@
     "url": "https://github.com/talyguryn"
   },
   "homepage": "https://stickerum.ru",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "devDependencies": {
     "@codexteam/deeplinker": "^1.1.0",
     "dotenv": "^6.0.0",

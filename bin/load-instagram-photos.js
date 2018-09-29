@@ -78,7 +78,7 @@ const processData = (instagramData) => {
 /**
  * Save processed data to file
  */
-const saveToFile = async (data) => {
+const saveToFile = async (data = {}) => {
   /**
    * Wrap <data> => {data: <data>}
    */
@@ -94,7 +94,7 @@ const saveToFile = async (data) => {
    */
   await fs.writeFileSync(outputFile, dataToPrint);
 
-  console.log('JSON data saved to %s', outputFile);
+  console.log(`JSON data saved to ${outputFile}`);
 }
 
 /**
@@ -103,6 +103,12 @@ const saveToFile = async (data) => {
 main(process)
 .then(getMedia)
 .then(processData)
+.catch(err => {
+  console.error(`Error while getting medias: ${err.message}.\n`);
+})
 .then(saveToFile)
 .then(process.exit)
-.catch(err => { console.error(err); process.exit(1) })
+.catch(err => {
+  console.error(err);
+  process.exit(1)
+})
