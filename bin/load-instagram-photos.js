@@ -9,19 +9,19 @@ require('dotenv').config()
 
 /**
  * To get an Instagram access token follow these steps:
- * 
+ *
  * 1. Create a new Instagram app on the page
  *    https://www.instagram.com/developer/clients/register/
- * 
+ *
  *    Fill fields with any valid params and take a look on "redirect URIs" field:
  *    Valid redirect URIs: https://stickerum.ru
- * 
+ *
  *    Enter here your site's address with protocol.
- * 
- * 2. Pass your app's <CLIENT_ID> and <REDIRECT_UTI> then open this URI
- *    https://www.instagram.com/oauth/authorize/?client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_UTI>&response_type=token
+ *
+ * 2. Pass your app's <CLIENT_ID> and <REDIRECT_URI> then open this URI
+ *    https://www.instagram.com/oauth/authorize/?client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&response_type=token&scope=public_content
  *    You will be asked to login and give access to the app
- * 
+ *
  *    You will be redirected to this page.
  *    https://stickerum.ru/#access_token=<ACCESS_TOKEN>
  *
@@ -46,11 +46,8 @@ const getMedia = () => {
   return rp({
     uri: 'https://api.instagram.com/v1/users/self/media/recent/',
     qs: {
-        access_token: ACCESS_TOKEN,
-        count: 9
-    },
-    headers: {
-        'User-Agent': 'Request-Promise'
+      access_token: ACCESS_TOKEN,
+      count: 9
     },
     json: true
   });
