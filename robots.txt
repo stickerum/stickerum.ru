@@ -1,0 +1,6 @@
+User-Agent: *
+Disallow:
+Allow: /
+Allow: /faq
+
+Sitemap: https://stickerum.ru/sitemap.xml
