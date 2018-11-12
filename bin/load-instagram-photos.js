@@ -5,7 +5,7 @@ const rp = require('request-promise');
 /**
  * Load ACCESS_TOKEN from .env file
  */
-require('dotenv').config()
+require('dotenv').config();
 
 /**
  * To get an Instagram access token follow these steps:
@@ -37,7 +37,7 @@ const outputFile = path.resolve(__dirname, '..', 'src', 'data', 'instagram-photo
 /**
  * Initial function
  */
-const main = async ({ argv }) => {}
+const main = async ({ argv }) => {};
 
 /**
  * Send API request to Instagram to get last medias
@@ -51,7 +51,7 @@ const getMedia = () => {
     },
     json: true
   });
-}
+};
 
 /**
  * Process response data from Instagram to our format
@@ -73,7 +73,7 @@ const processData = (instagramData) => {
   });
 
   return data;
-}
+};
 
 /**
  * Save processed data to file
@@ -82,7 +82,7 @@ const saveToFile = async (data = {}) => {
   /**
    * Wrap <data> => {data: <data>}
    */
-  data = {data}
+  data = {data};
 
   /**
    * Prepare pretty printed json object
@@ -95,20 +95,20 @@ const saveToFile = async (data = {}) => {
   await fs.writeFileSync(outputFile, dataToPrint);
 
   console.log(`JSON data saved to ${outputFile}`);
-}
+};
 
 /**
  * Main process chain
  */
 main(process)
-.then(getMedia)
-.then(processData)
-.catch(err => {
-  console.error(`Error while getting medias: ${err.message}.\n`);
-})
-.then(saveToFile)
-.then(process.exit)
-.catch(err => {
-  console.error(err);
-  process.exit(1)
-})
+  .then(getMedia)
+  .then(processData)
+  .catch(err => {
+    console.error(`Error while getting medias: ${err.message}.\n`);
+  })
+  .then(saveToFile)
+  .then(process.exit)
+  .catch(err => {
+    console.error(err);
+    process.exit(1)
+  });
