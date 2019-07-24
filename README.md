@@ -4,7 +4,7 @@
 
 ## Development and deployment
 
-Use Node.js and NPM to build scripts and styles.
+Use Node.js and Yarn to build scripts and styles.
 
 ### Get images from Instagram
 
@@ -32,7 +32,7 @@ Your access token was placed to the URI. Place this token into the `.env` file (
 Then call a script:
 
 ```
-npm run instagram
+yarn instagram
 ```
 
 ![](https://capella.pics/d56f50bb-22b8-4db6-9448-de9f0830c137.jpg)
@@ -42,11 +42,11 @@ npm run instagram
 Use the following commands to build scripts and styles.
 
 ```
-npm run build
+yarn build
 ```
 
 ```
-npm run css
+yarn css
 ```
 
 ### Run Docker server
