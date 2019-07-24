@@ -65,8 +65,11 @@ module.exports = (() => {
         /**
          * Set photo as background image
          */
-        photoWrapper.style.background = 'url(' + src + ') no-repeat center center';
+        photoWrapper.style.background = 'url(\"' + src + '\") no-repeat center center';
         photoWrapper.style.backgroundSize = 'cover';
+
+        console.log(src);
+        console.log(photoWrapper.style.background);
 
         /**
          * Generate random background color for tile while image not loaded
