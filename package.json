@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "instagram": "node ./bin/load-instagram-photos.js",
-    "build": "webpack ./src/index.js -o ./public/bundle.js --verbose --watch --mode production",
-    "css": "postcss ./src/index.pcss -o ./public/bundle.css --verbose --watch"
+    "build": "webpack ./src/index.js -o ./public/bundle.js --verbose --mode production",
+    "css": "postcss ./src/index.pcss -o ./public/bundle.css --verbose"
   },
   "author": {
     "name": "Taly Guryn",
